@@ -1,6 +1,6 @@
 # VGN X68 Custom Firmware
 
-> **Bu fork / This fork — 0.10.0**
+> **Bu fork / This fork — 0.10.1**
 >
 > **TR:** [fatihacan1/vgn-x68-custom-firmware](https://github.com/fatihacan1/vgn-x68-custom-firmware) projesinin, orijinal repoya PR olarak da gönderilen eklemelerle derlenmiş hâli. **[Son sürümü indir](https://github.com/pkryusuf/vgn-x68-custom-firmware/releases/latest)** — tek bir EXE, kurulum gerekmez.
 > - Türkçe arayüz (TR/EN seçici), sade dilde güvenlik uyarıları ve firmware öncesi kontrol listesi
@@ -32,7 +32,7 @@ So we built our own. The USB protocol was worked out from scratch, every command
 The EXE is **not code-signed**, so Windows SmartScreen may warn on first launch. Choose **More info → Run anyway**, and only do this for a file you downloaded from this repository. Each release includes `SHA256SUMS.txt`. Check your download in PowerShell:
 
 ```powershell
-Get-FileHash .\VGN-X68-Custom-Firmware-0.10.0-Windows.exe -Algorithm SHA256
+Get-FileHash .\VGN-X68-Custom-Firmware-0.10.1-Windows.exe -Algorithm SHA256
 ```
 
 Plug the keyboard in with a USB cable and set its mode switch to wired. The app finds it on its own.
