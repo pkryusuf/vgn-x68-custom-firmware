@@ -746,7 +746,7 @@ class Studio:
   try:self.knowledge=(ASSETS/'docs/AI-KNOWLEDGE.md').read_text(encoding='utf-8')
   except OSError:self.knowledge=t('Knowledge file missing. Use the complete application folder.')
   text.insert('1.0',self.knowledge);text.configure(state='disabled')
- def knowledge_record(self):return {'application':'VGN X68 Custom Firmware','version':'0.9.2','custom_crc':RETRO_BADGE_CRC,'format':'Markdown','context':self.knowledge,'unknowns':['Battery current and charge control (voltage is an estimate via an inferred 1:2 divider)','Early SUBOR splash storage','Physical macOS validation','Custom-media physical validation pending']}
+ def knowledge_record(self):return {'application':'VGN X68 Custom Firmware','version':'0.10.0','custom_crc':RETRO_BADGE_CRC,'format':'Markdown','context':self.knowledge,'unknowns':['Battery current and charge control (voltage is an estimate via an inferred 1:2 divider)','Early SUBOR splash storage','Physical macOS validation','Custom-media physical validation pending']}
  def copy_knowledge(self):self.root.clipboard_clear();self.root.clipboard_append(self.knowledge);self.status.set(t('AI context copied to clipboard.'))
  def export_knowledge(self):
   path=filedialog.asksaveasfilename(parent=self.root,initialfile='X68-AI-KNOWLEDGE.md',defaultextension='.md',filetypes=[('Markdown','*.md')])
@@ -1064,7 +1064,7 @@ class Studio:
  def save_json(self,data,name):
   path=filedialog.asksaveasfilename(parent=self.root,initialfile=name,defaultextension='.json',filetypes=[('JSON','*.json')])
   if path:Path(path).write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8');self.status.set(t('File saved.'))
- def report(self):return {'app':'VGN X68 Custom Firmware 0.9.2','inventory':self.inventory,'version':self.version,'settings':self.settings,'packets':self.settings_client.trace,'battery':self.history.report(),'logs':self.logs}
+ def report(self):return {'app':'VGN X68 Custom Firmware 0.10.0','inventory':self.inventory,'version':self.version,'settings':self.settings,'packets':self.settings_client.trace,'battery':self.history.report(),'logs':self.logs}
  def details(self):
   self.raw.configure(state='normal');self.raw.delete('1.0','end');self.raw.insert('1.0',json.dumps(self.report(),ensure_ascii=False,indent=2));self.raw.configure(state='disabled')
   self.log_text.configure(state='normal');self.log_text.delete('1.0','end');self.log_text.insert('1.0',json.dumps(self.logs,ensure_ascii=False,indent=2));self.log_text.configure(state='disabled')

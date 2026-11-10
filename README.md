@@ -1,5 +1,16 @@
 # VGN X68 Custom Firmware
 
+> **Bu fork / This fork — 0.10.0**
+>
+> **TR:** [fatihacan1/vgn-x68-custom-firmware](https://github.com/fatihacan1/vgn-x68-custom-firmware) projesinin, orijinal repoya PR olarak da gönderilen eklemelerle derlenmiş hâli. **[Son sürümü indir](https://github.com/pkryusuf/vgn-x68-custom-firmware/releases/latest)** — tek bir EXE, kurulum gerekmez.
+> - Türkçe arayüz (TR/EN seçici), sade dilde güvenlik uyarıları ve firmware öncesi kontrol listesi
+> - Her ışık efektinin canlı önizlemesi ve klavyeye ne gideceğini gösteren özet
+> - Açıklamalı makro sayfası, okunur pil grafiği, her firmware sürümünün canlı LCD önizlemesi
+> - **Deneysel Lavender Quest 0.10.0:** 1-4. ekranların her biri kendi resmini/GIF'ini gösterir, Fn+PgUp ile gezilir
+> - Klavyeniz eski **V0112** ise: önce VGN'in resmi güncelleyicisiyle V0113'e geçin — adım adım rehber: [#5](https://github.com/fatihacan1/vgn-x68-custom-firmware/issues/5)
+>
+> **EN:** A build of the original project with additions that are also open as pull requests upstream: Turkish UI, plain-language safety warnings, per-effect lighting preview, clearer macros, live per-build LCD preview, and an experimental multi-screen Lavender build. All credit for the original app, protocol work and Lavender Quest goes to [fatihacan1](https://github.com/fatihacan1).
+
 An open-source Windows app for the VGN / SUBOR X68 keyboard. Lighting, keymaps, macros, the little LCD screen, battery checks and firmware, all in one place, with nothing written to the keyboard until you press Send.
 
 <p align="center">
@@ -16,12 +27,12 @@ So we built our own. The USB protocol was worked out from scratch, every command
 
 ## Download and install
 
-**Free and open source. Windows 10 or 11.** Download `VGN-X68-Custom-Firmware-<version>-Windows.exe` from [GitHub Releases](https://github.com/fatihacan1/vgn-x68-custom-firmware/releases/latest) and run it. It is a single portable EXE. You do not need to install anything, including Python.
+**Free and open source. Windows 10 or 11.** Download `VGN-X68-Custom-Firmware-<version>-Windows.exe` from [this fork's releases](https://github.com/pkryusuf/vgn-x68-custom-firmware/releases/latest) (or the [original releases](https://github.com/fatihacan1/vgn-x68-custom-firmware/releases/latest)) and run it. It is a single portable EXE. You do not need to install anything, including Python.
 
 The EXE is **not code-signed**, so Windows SmartScreen may warn on first launch. Choose **More info → Run anyway**, and only do this for a file you downloaded from this repository. Each release includes `SHA256SUMS.txt`. Check your download in PowerShell:
 
 ```powershell
-Get-FileHash .\VGN-X68-Custom-Firmware-0.9.2-Windows.exe -Algorithm SHA256
+Get-FileHash .\VGN-X68-Custom-Firmware-0.10.0-Windows.exe -Algorithm SHA256
 ```
 
 Plug the keyboard in with a USB cable and set its mode switch to wired. The app finds it on its own.
